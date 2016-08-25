@@ -190,10 +190,10 @@ class SurveyOne(TimeStampedModel):
     schemes_healthcare_schemes = models.CharField(max_length=200)
     schemes_labour_schemes = models.CharField(max_length=200)
     children_info_gender = models.CharField(max_length=100)
-    info_caseid = models.TextField()
-    info_completed_time = models.CharField(max_length=50)
+    info_caseid = models.CharField(max_length=15)
+    info_completed_time = models.DateTimeField()
     info_username = models.CharField(max_length=200)
-    server_received_on = models.CharField(max_length=50)
+    server_received_on = models.DateTimeField()
 
     class Meta:
         db_table = "survey_one"
